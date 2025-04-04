@@ -4,8 +4,8 @@ A simple HTTP server that provides a REST API for controlling and retrieving inf
 
 ## Requirements
 
+- macOS
 - Node.js `v20.0.0` or later
-- `nowplaying-cli` must be installed and available in your PATH
 
 ## Installation
 
@@ -21,12 +21,6 @@ A simple HTTP server that provides a REST API for controlling and retrieving inf
    ```
    npm install
    ```
-
-3. Make sure the `nowplaying-cli` is installed:
-   ```
-   which nowplaying-cli
-   ```
-   If not installed, follow the installation instructions for [`nowplaying-cli`](https://github.com/kirtan-shah/nowplaying-cli).
 
 ## Usage
 
@@ -78,4 +72,4 @@ PORT=4000 HOST=localhost npm start
 ```
 
 > [!TIP]
-When requesting with `artwork`, you'll also receive an `artworkData` field containing a base64-encoded image with data URI format.
+> When requesting with `artwork`, you'll also receive an `artworkData` field containing a base64-encoded image with data URI format.
