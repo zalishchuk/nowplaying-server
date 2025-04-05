@@ -65,14 +65,23 @@ PORT=4000 HOST=localhost npm start
 
 ```json
 {
-  "album": "",
-  "artist": "M539 Restorations",
-  "contentItemIdentifier": "EDB6BDDA-206B-4DA8-82C1-D0990D9B4644",
-  "currentPlaybackDate": "2025-04-04 07:45:15 +0000",
-  "duration": 4046.761,
-  "elapsedTime": 2341.986012,
-  "playbackRate": 0,
-  "timestamp": "2025-04-04 18:34:31 +0000",
-  "title": "I Traveled 5000 Miles to Save $17000 on a Rare BMW M Car"
+  "album": "electrock",
+  "artist": "m.o.v.e",
+  "artworkData": "data:image/jpeg;base64,{encoded_image_data}",
+  "artworkDataHeight": 600,
+  "artworkDataWidth": 600,
+  "artworkIdentifier": "a18c1884c58f81f6",
+  "artworkMIMEType": "image/jpeg",
+  "contentItemIdentifier": "12618E11-E70B-42D8-A69E-9BFE2356714B",
+  "discNumber": 1,
+  "duration": 272.966,
+  "elapsedTime": 46.636212,
+  "mediaType": "kMRMediaRemoteNowPlayingInfoTypeAudio",
+  "playbackRate": 1,
+  "timestamp": "2025-04-05 01:09:57 +0000",
+  "title": "Rage your dream",
+  "totalDiscCount": 1,
+  "totalTrackCount": 11,
+  "trackNumber": 4
 }
 ```
