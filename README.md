@@ -2,6 +2,10 @@
 
 A simple HTTP server that provides a REST API for controlling and retrieving information about the currently playing media on macOS.
 
+## How It Works
+
+This project builds upon the excellent [`nowplaying-cli`](https://github.com/kirtan-shah/nowplaying-cli) tool, which offers fundamental capabilities for retrieving media information and managing playback on macOS. Sincere gratitude to the developers for making this repository possible. Precompiled binary is included. If the bundled binary encounters an error, the server will try to execute a `nowplaying-cli` command located in your system `PATH` as a fallback.
+
 ## Requirements
 
 - macOS `<15.4`
