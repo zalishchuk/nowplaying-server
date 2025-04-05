@@ -9,9 +9,13 @@
   "scripts": {
     "start": "node index.mjs",
     "watch": "nodemon index.mjs",
-    "lint": "biome lint",
-    "format": "biome format",
-    "test": "biome check"
+    "test": "biome check --write --no-errors-on-unmatched",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,cjs,mjs,json,jsonc}": [
+      "biome check --write --no-errors-on-unmatched"
+    ]
   },
   "dependencies": {
     "dotenv": "^16.4.7",
@@ -19,6 +23,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
     "nodemon": "^3.1.9"
   }
 }
