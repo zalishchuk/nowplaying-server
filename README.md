@@ -10,7 +10,8 @@ A simple HTTP server that provides a REST API for controlling and retrieving inf
 > [!CAUTION]
 > macOS 15.4 doesn't allow third party apps to access the system's "Now Playing" information anymore.
 >
-> https://forum.keyboardmaestro.com/t/beware-upgrading-to-macos-15-4-if-you-need-now-playing-data/40285 
+> https://forum.keyboardmaestro.com/t/beware-upgrading-to-macos-15-4-if-you-need-now-playing-data/40285
+> 
 > https://community.folivora.ai/t/now-playing-is-no-longer-working-on-macos-15-4/42802
 
 ## Installation
@@ -41,7 +42,7 @@ By default, the server runs on `0.0.0.0:3333`. You can configure the `host` and 
 PORT=4000 HOST=localhost npm start
 ```
 
-> [!NOTE]
+> [!TIP]
 > You can also use a `.env*` to configure environment variables.
 
 ## API Endpoints
