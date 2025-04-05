@@ -7,9 +7,18 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "start": "node index.mjs"
+    "start": "node index.mjs",
+    "watch": "nodemon index.mjs",
+    "lint": "biome lint",
+    "format": "biome format",
+    "test": "biome check"
   },
   "dependencies": {
+    "dotenv": "^16.4.7",
     "fastify": "^5.2.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "nodemon": "^3.1.9"
   }
 }
