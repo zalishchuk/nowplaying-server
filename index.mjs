@@ -16,8 +16,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const config = {
-  bin: resolve(__dirname, 'bin', 'nowplaying'),
-  binFallback: process.env.PATH_BIN ?? 'nowplaying-cli',
+  bin: process.env.PATH_BIN ?? 'nowplaying-cli',
+  binFallback: resolve(__dirname, 'bin', 'nowplaying'),
   port: process.env.PORT ?? 3333,
   host: process.env.HOST ?? '0.0.0.0',
   commands: new Set(['play', 'pause', 'toggle', 'next', 'previous']),

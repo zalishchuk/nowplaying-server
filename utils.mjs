@@ -129,25 +129,25 @@ export function canExecFile(path) {
 }
 
 /**
- * Ensures an executable is available, first checking for a local binary, then falling back to a global.
+ * Ensures an executable is available, first checking if it exists globally, then falling back to a local binary.
  *
- * @param {string} path - Path to the local executable binary to check first
- * @param {string} globalPath - Name of the global executable to use as fallback
+ * @param {string} path - Name of the global executable to check first
+ * @param {string} localPath - Path to the local executable binary to check as fallback
  * @returns {string} The path to the available executable
- * @throws {Error} If neither the local nor global binary is accessible
+ * @throws {Error} If neither the global nor local binary is accessible
  */
-export function ensureExecutable(path, globalPath) {
-  if (canExecFile(path)) return path;
-
+export function ensureExecutable(path, localPath) {
   try {
-    const binaryPath = execFileSync('which', [globalPath], { encoding: 'utf-8' }).trim();
-    if (!binaryPath) throw new Error('Executable Not Found');
-
-    console.log(`Warning: Local executable not found at ${path}`);
-    console.log(`Using fallback global executable from ${binaryPath}`);
-    return binaryPath;
+    const binaryPath = execFileSync('which', [path], { encoding: 'utf-8' }).trim();
+    if (binaryPath) return binaryPath;
   } catch (error) {
-    console.log(error);
-    throw new Error(`Executable Not Found: ${path} and ${globalPath} are not accessible.`);
+    console.log(`Global executable ${path} not found.`);
   }
+
+  if (canExecFile(localPath)) {
+    console.log(`Using local executable at ${localPath}.`);
+    return localPath;
+  }
+
+  throw new Error(`Executable Not Found: Neither ${path} nor ${localPath} (local) are accessible.`);
 }
